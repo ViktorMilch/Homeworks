@@ -34,3 +34,25 @@ def show():
 print(show.__doc__)
 result = show()
 print(result)
+def show():
+    """there should be some text here"""
+    lines = [input() for i in range(5)]
+    f_lines = filter(lambda a: len(a) >= 3, lines)
+    f_lines = filter(lambda a: "a" in a or "A" in a, lines)
+    u_lines = map(lambda a: a.upper(), f_lines)
+    return tuple(u_lines)
+
+print(show.__doc__)
+result = show()
+print(result)
+# def show():
+#     """there should be some text here"""
+#     lines = [input() for i in range(5)]
+#     f_lines = filter(lambda a: len(a) >= 3, lines)
+#     f_lines = filter(lambda a: "a" in a or "A" in a, lines)
+#     u_lines = map(lambda a: a.upper(), f_lines)
+#     return tuple(u_lines)
+
+# print(show.__doc__)
+# result = show()
+# # print(result)
